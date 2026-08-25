@@ -29,9 +29,9 @@ marp: true
 
   const result = addMiniFrameNavigation(markdown);
 
-  assert.match(result, /Introduction  ●○.*Results  ○/);
-  assert.match(result, /Introduction  ○●.*Results  ○/);
-  assert.match(result, /Introduction  ○○.*Results  ●/);
+  assert.match(result, /Introduction&nbsp;&nbsp;●○.*Results&nbsp;&nbsp;○/);
+  assert.match(result, /Introduction&nbsp;&nbsp;○●.*Results&nbsp;&nbsp;○/);
+  assert.match(result, /Introduction&nbsp;&nbsp;○○.*Results&nbsp;&nbsp;●/);
 });
 
 test("excludes slides marked with ufc-nav off", () => {
@@ -52,8 +52,8 @@ marp: true
 
   const result = addMiniFrameNavigation(markdown);
 
-  assert.match(result, /Main  ●/);
-  assert.doesNotMatch(result, /Main  ●●/);
+  assert.match(result, /Main&nbsp;&nbsp;●/);
+  assert.doesNotMatch(result, /Main&nbsp;&nbsp;●●/);
   assert.doesNotMatch(result.split("# Closing")[0].split("---").at(-1), /_header/);
 });
 
@@ -71,6 +71,6 @@ marp: true
 
   const result = addMiniFrameNavigation(markdown);
 
-  assert.match(result, /Code  ●/);
-  assert.doesNotMatch(result, /Code  ●○/);
+  assert.match(result, /Code&nbsp;&nbsp;●/);
+  assert.doesNotMatch(result, /Code&nbsp;&nbsp;●○/);
 });

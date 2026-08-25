@@ -43,6 +43,22 @@ section header {
   text-align: left;
 }
 
+.ufc-miniframes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+}
+
+.ufc-miniframes > span {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 section[data-marpit-pagination] footer {
   position: absolute;
   z-index: 5;

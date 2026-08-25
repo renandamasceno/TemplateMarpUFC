@@ -72,7 +72,7 @@ function cleanSlide(lines) {
 }
 
 function navigationHeader(sections, currentSection, currentPosition) {
-  return sections
+  const groups = sections
     .map((section) => {
       const dots = section.slides
         .map((_, index) =>
@@ -80,9 +80,11 @@ function navigationHeader(sections, currentSection, currentPosition) {
         )
         .join("");
 
-      return `${section.name}  ${dots}`;
+      return `<span>${section.name}&nbsp;&nbsp;${dots}</span>`;
     })
-    .join("　　　　　　　　");
+    .join("");
+
+  return `<div class='ufc-miniframes'>${groups}</div>`;
 }
 
 export function addMiniFrameNavigation(markdown) {
@@ -114,7 +116,7 @@ export function addMiniFrameNavigation(markdown) {
       slide.section,
       slide.sectionPosition,
     );
-    const directive = `<!-- _header: ${header} -->`;
+    const directive = `<!-- _header: "${header}" -->`;
     const firstContentLine = slide.content.findIndex((line) => line.trim() !== "");
 
     if (firstContentLine === -1) return directive;
