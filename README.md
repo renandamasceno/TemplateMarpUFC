@@ -63,6 +63,8 @@ TemplateMarpUFC/
 ├── assets/                 # Emblems and theme images
 ├── themes/ufc.css          # Marp theme
 ├── scripts/build.mjs       # Site build and asset copy
+├── scripts/engine.mjs      # Automatic mini-frame navigation
+├── test/                   # Navigation engine tests
 ├── slides.md               # Example presentation
 ├── .marprc.yml             # Local Marp configuration
 ├── package-lock.json       # Reproducible dependency versions
@@ -94,6 +96,40 @@ The example presentation demonstrates the following CSS classes:
 - `figure`, `caption`, and `source`: figure, caption, and source formatting;
 - `code-slide` and `code-caption`: source-code slides;
 - `thanks`: closing slide.
+
+### Automatic mini-frame navigation
+
+The custom Marp engine reproduces Beamer's mini-frame navigation. Start a section
+by adding a marker to its first slide:
+
+```markdown
+<!-- ufc-section: Introduction -->
+
+# Context
+
+---
+
+# Motivation
+
+---
+
+<!-- ufc-section: Methodology -->
+
+# Proposed method
+```
+
+The engine counts the slides in every section, creates one circle for each slide,
+and fills the circle for the current slide. Use the following marker on title,
+closing, or other slides that should not appear in the navigation:
+
+```markdown
+<!-- ufc-nav: off -->
+```
+
+The automatic navigation is available through the project's Marp CLI commands,
+including `npm run start`, `npm run watch`, `npm run build`, `npm run pdf`, and
+`npm run pptx`. Third-party previews that do not load `.marprc.yml` and the custom
+engine will not generate the navigation.
 
 ### Blocks
 
@@ -134,7 +170,10 @@ The main colors are defined at the beginning of `themes/ufc.css`:
 --ufc-red: #d70000;
 ```
 
-Update the `header` and `footer` fields in the `slides.md` front matter to change the section labels, author, short title, and date. The footer contains three spans so that each value remains aligned with its corresponding color field.
+Update the `ufc-section` markers in `slides.md` to change the navigation labels.
+Update the `footer` field in the front matter to change the author, short title,
+and date. The footer contains three spans so that each value remains aligned with
+its corresponding color field.
 
 ## GitHub Pages
 

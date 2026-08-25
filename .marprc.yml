@@ -1,5 +1,5 @@
 themeSet:
   - themes/ufc.css
+engine: ./scripts/engine.mjs
 allowLocalFiles: true
 html: true
-

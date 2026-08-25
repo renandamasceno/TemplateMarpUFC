@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test custom navigation engine
+        run: npm test
+
       - name: Build presentation
         run: npm run build
 

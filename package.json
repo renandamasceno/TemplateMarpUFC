@@ -11,6 +11,7 @@
     "ufc"
   ],
   "scripts": {
+    "test": "node --test",
     "start": "marp --server --config-file .marprc.yml .",
     "watch": "marp --watch --config-file .marprc.yml slides.md",
     "build": "node scripts/build.mjs",

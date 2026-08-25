@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test custom navigation engine
+        run: npm test
+
       - name: Validate HTML build
         run: npm run build

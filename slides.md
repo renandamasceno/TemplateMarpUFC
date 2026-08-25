@@ -7,7 +7,6 @@ lang: pt-BR
 title: Título da Apresentação - Subtítulo da Apresentação
 author: Nome do Autor
 description: Template Marp fiel ao Template Beamer UFC.
-header: 'Seção I  ○○○○○○○○　　　　　　　　Multicolunas  ○　　　　　　　　Imagens  ○　　　　　　　　Referências  ○'
 footer: '<span class="footer-author">Nome do Autor / UFC</span><span class="footer-title">short title</span><span class="footer-date">24 de agosto de 2026</span>'
 ---
 
@@ -39,6 +38,8 @@ footer: '<span class="footer-author">Nome do Autor / UFC</span><span class="foot
 </div>
 
 ---
+
+<!-- ufc-section: Seção I -->
 
 # Explicações
 
@@ -179,6 +180,8 @@ public class FirstClass {
 
 ---
 
+<!-- ufc-section: Multicolunas -->
+
 # Seção II - Multicolunas
 
 <div class="columns">
@@ -199,6 +202,8 @@ Porém, o espaçamento deve ser proporcional entre as colunas para que elas não
 
 ---
 
+<!-- ufc-section: Imagens -->
+
 # Seção III - Figuras
 
 <div class="figure">
@@ -208,6 +213,8 @@ Porém, o espaçamento deve ser proporcional entre as colunas para que elas não
 </div>
 
 ---
+
+<!-- ufc-section: Referências -->
 
 # Referências I
 
@@ -220,6 +227,7 @@ Porém, o espaçamento deve ser proporcional entre as colunas para que elas não
 ---
 
 <!-- _class: thanks -->
+<!-- ufc-nav: off -->
 
 # Obrigado(a) pela Atenção!
 
