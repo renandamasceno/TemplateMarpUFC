@@ -1,0 +1,27 @@
+{
+  "name": "template-marp-ufc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Template Marp 4:3 inspirado no Template Beamer UFC.",
+  "license": "UNLICENSED",
+  "keywords": [
+    "marp",
+    "markdown",
+    "presentation",
+    "ufc"
+  ],
+  "scripts": {
+    "start": "marp --server --config-file .marprc.yml .",
+    "watch": "marp --watch --config-file .marprc.yml slides.md",
+    "build": "node scripts/build.mjs",
+    "pdf": "marp slides.md --config-file .marprc.yml --pdf -o dist/presentation.pdf",
+    "pptx": "marp slides.md --config-file .marprc.yml --pptx -o dist/presentation.pptx",
+    "images": "marp slides.md --config-file .marprc.yml --images png -o dist/slides/slide.png"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

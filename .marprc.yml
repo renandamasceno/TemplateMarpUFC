@@ -1,0 +1,5 @@
+themeSet:
+  - themes/ufc.css
+allowLocalFiles: true
+html: true
+
