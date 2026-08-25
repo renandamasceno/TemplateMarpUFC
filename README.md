@@ -12,7 +12,7 @@
 <div align="center">
 
 [![Made with Marp](https://img.shields.io/badge/Made%20with-Marp-0288d1?logo=markdown&logoColor=white)](https://marp.app/)
-[![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Node.js 24+](https://img.shields.io/badge/Node.js-24%2B-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Deploy with GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://pages.github.com/)
 
 </div>
@@ -47,7 +47,7 @@ This template may be useful to UFC professors, students, researchers, and staff.
 
 ## Getting started
 
-Node.js 20 or newer is required.
+Node.js 24 or newer is required.
 
 ```bash
 npm ci

@@ -2,7 +2,7 @@
   "name": "template-marp-ufc",
   "version": "0.1.0",
   "private": true,
-  "description": "Template Marp 4:3 inspirado no Template Beamer UFC.",
+  "description": "A 4:3 Marp template inspired by the UFC Beamer template.",
   "license": "UNLICENSED",
   "keywords": [
     "marp",
@@ -22,6 +22,6 @@
     "@marp-team/marp-cli": "4.5.0"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   }
 }
