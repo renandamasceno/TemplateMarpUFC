@@ -20,7 +20,7 @@
     "images": "marp slides.md --config-file .marprc.yml --images png -o dist/slides/slide.png"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "4.5.0"
+    "@marp-team/marp-cli": "4.5.1"
   },
   "engines": {
     "node": ">=24"
